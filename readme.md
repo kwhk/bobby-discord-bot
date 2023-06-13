@@ -31,6 +31,8 @@ $ docker run <THE_NAME_OF_THE_TAG>
 
 # Contributing
 
+``` Mitochondria is the powerhouse of the cell```
+
 ### If you want to contribute a new feature
 1. Refer to the [discord.py documentation](https://discordpy.readthedocs.io/en/latest/index.html) and [Github repo](https://github.com/Rapptz/discord.py)
 1. Look at `src/commands/ping.py` on how to write a basic discord command
