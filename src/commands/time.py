@@ -21,5 +21,5 @@ class Time(commands.Cog):
         # I don't know what the truck means. Amazon a.k.a Seattle time??
         await ctx.send(":truck:: %s | :flag_ca:: %s | :flag_gb:: %s | :flag_hk:: %s | :flag_jp:: %s | :flag_au:: %s" % (pdt, use, ukt, hkt, jpt, aus))
 
-async def setup(bot):    
+async def setup(bot):
     await bot.add_cog(Time(bot))

@@ -1,0 +1,12 @@
+services:
+  bobby-bot:
+    build: ./bobby-bot-python
+    environment:
+      API_TOKEN_FILE: /run/secrets/api_token_file
+    secrets:
+      - api_token_file
+    container_name: bobby-bot-python
+    restart: unless-stopped
+secrets:
+  api_token_file:
+    file: ./bobby-bot-python/api_token.txt

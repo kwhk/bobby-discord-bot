@@ -6,7 +6,7 @@ class Bark(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         self.subscribed_channels = {}
-    
+
     # "@here bark!" when the first user joins the voice channel.
     @commands.Cog.listener()
     async def on_voice_state_update(
@@ -24,11 +24,10 @@ class Bark(commands.Cog):
             # First person there
             if len(after.channel.members) == 1:
                 guild_id = after.channel.guild.id
-                
                 if guild_id in self.subscribed_channels:
                     channel = self.subscribed_channels[guild_id]
                     await channel.send(f"@here bark! {after.channel.name}")
-    
+
     @commands.command(name="subscribe")
     async def subscribe_current_channel(self, ctx: CustomContext):
         """Subscribes the text channel the user is currently in for barking notifications"""

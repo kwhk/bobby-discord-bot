@@ -39,4 +39,3 @@ class BobbyBot(commands.Bot):
             if file.endswith(".py"):
                 await self.load_extension(f"commands.{file[:-3]}")
         log.info('Extensions successfully loaded')
-        
